@@ -47,6 +47,15 @@ app.get("/posts", (req, res) => {
     res.json(posts); // Restituisce i post come oggetti JSON
 });
 
+// Rotta /bacheca per ottenere la lista dei post e il conteggio
+app.get("/bacheca", (req, res) => {
+    const result = {
+        conteggio: posts.length, 
+        posts: posts             
+    };
+    res.json(result); 
+});
+
 // Fallback per rotte non trovate
 app.all("*", (req, res) => {
     res.status(404).send("<h1>Error 404 - Not Found!</h1>");
