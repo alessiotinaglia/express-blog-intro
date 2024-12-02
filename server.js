@@ -3,37 +3,40 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 
+// immagini statiche 
+app.use(express.static('public'));
+
 // Array di post
 const posts = [
     {
         titolo: "Ricetta ciambellone",
         contenuto: "Oggi parleremo della ricetta del ciambellone",
-        immagine: "/images/post1.jpg",
-        tags: ["uova", "farina", "burro"]
+        immagine: ('<img scr="/images/ciambellone.jpeg">'),
+        tags: ["Uova", "Farina", "Burro"]
     },
     {
         titolo: "Ricetta cracker alla barbabietola",
         contenuto: "Oggi parleremo delle ricetta cracker alla barbabietola",
-        immagine: "/images/post2.jpg",
-        tags: ["cracker", "barbabietola", "olio"]
+        immagine: ('<img scr="/images/cracker_barbabietola.jpeg">'),
+        tags: ["Cracker", "Barbabietola", "Olio"]
     },
     {
         titolo: "Ricetta pane fritto",
         contenuto: "Oggi parleremo della ricetta del pane fritto",
-        immagine: "/images/post3.jpg",
+        immagine: ('<img scr="/images/pane_fritto_dolce.jpeg">'),
         tags: ["Pane", "latte", "uova"]
     },
     {
-        titolo: "Quarto post",
-        contenuto: "Questo è il contenuto del mio primo post. Parlerò di come iniziare con Node.js.",
-        immagine: "/images/post4.jpg",
-        tags: ["Node.js", "Introduzione", "Backend"]
+        titolo: "Ricetta barbabietola",
+        contenuto: "Oggi parleremo della ricetta barbabietola",
+        immagine: ('<img scr="/images/pasta_barbabietola.jpeg">'),
+        tags: ["Sale", "Colorante", "Latte"]
     },
     {
-        titolo: "Quinto post",
-        contenuto: "Questo è il contenuto del mio primo post. Parlerò di come iniziare con Node.js.",
-        immagine: "/images/post5.jpg",
-        tags: ["Node.js", "Introduzione", "Backend"]
+        titolo: "Ricetta torta_paesana",
+        contenuto: "Oggi parleremo della ricetta torta_paesana",
+        immagine: ('<img scr="/images/torta_paesana.jpeg">'),
+        tags: ["Farina", "Uova", "Latte"]
     }
 ];
 
