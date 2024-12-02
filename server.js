@@ -6,33 +6,33 @@ const PORT = 3000;
 // Array di post
 const posts = [
     {
-        titolo: "Il mio primo post",
-        contenuto: "Questo è il contenuto del mio primo post. Parlerò di come iniziare con Node.js.",
-        immagine: "",
-        tags: ["Node.js", "Introduzione", "Backend"]
+        titolo: "Ricetta ciambellone",
+        contenuto: "Oggi parleremo della ricetta del ciambellone",
+        immagine: "/images/post1.jpg",
+        tags: ["uova", "farina", "burro"]
     },
     {
-        titolo: "Secondo post",
-        contenuto: "Questo è il contenuto del mio primo post. Parlerò di come iniziare con Node.js.",
-        immagine: "",
-        tags: ["Node.js", "Introduzione", "Backend"]
+        titolo: "Ricetta cracker alla barbabietola",
+        contenuto: "Oggi parleremo delle ricetta cracker alla barbabietola",
+        immagine: "/images/post2.jpg",
+        tags: ["cracker", "barbabietola", "olio"]
     },
     {
-        titolo: "Terzo post",
-        contenuto: "Questo è il contenuto del mio primo post. Parlerò di come iniziare con Node.js.",
-        immagine: "",
-        tags: ["Node.js", "Introduzione", "Backend"]
+        titolo: "Ricetta pane fritto",
+        contenuto: "Oggi parleremo della ricetta del pane fritto",
+        immagine: "/images/post3.jpg",
+        tags: ["Pane", "latte", "uova"]
     },
     {
         titolo: "Quarto post",
         contenuto: "Questo è il contenuto del mio primo post. Parlerò di come iniziare con Node.js.",
-        immagine: "",
+        immagine: "/images/post4.jpg",
         tags: ["Node.js", "Introduzione", "Backend"]
     },
     {
         titolo: "Quinto post",
         contenuto: "Questo è il contenuto del mio primo post. Parlerò di come iniziare con Node.js.",
-        immagine: "",
+        immagine: "/images/post5.jpg",
         tags: ["Node.js", "Introduzione", "Backend"]
     }
 ];
@@ -44,7 +44,7 @@ app.get("/", (req, res) => {
 
 // Rotta per ottenere tutti i post
 app.get("/posts", (req, res) => {
-    res.json(posts); // Restituisce i post come oggetti JSON
+    res.json(posts); 
 });
 
 // Rotta /bacheca per ottenere la lista dei post e il conteggio
