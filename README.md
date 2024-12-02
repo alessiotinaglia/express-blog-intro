@@ -15,7 +15,6 @@ Creiamo il nostro blog personale e giorno dopo giorno lo potremo arricchire con 
 - Testare su postman
 
 
-
 Bonus:
 
 filtrare i dati sulla base di parametri in query string
